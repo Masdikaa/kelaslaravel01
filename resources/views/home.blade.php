@@ -7,7 +7,7 @@
                 <h3>Data Mahasiswa</h3>
                 <h4>Kelas A</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body pt-4">
                 <table class="table" id="example">
                     <thead>
                         <tr>
@@ -18,12 +18,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>213307015</td>
-                            <td>Masdika Ilhan Mansiz</td>
-                            <td>Ponorogo</td>
-                        </tr>
+                        @foreach ($dataKelasA as $kelasA)
+                            <tr>
+                                <td>{{ $kelasA->id }}</td>
+                                <td>{{ $kelasA->no_induk }}</td>
+                                <td>{{ $kelasA->nama }}</td>
+                                <td>{{ $kelasA->alamat }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
