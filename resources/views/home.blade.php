@@ -7,7 +7,7 @@
                 <h3>Data Mahasiswa</h3>
             </div>
             <div class="card-body pt-4">
-                <table class="table" id="example">
+                <table class="table stripe" id="example">
                     <thead>
                         <tr>
                             <th>No</th>

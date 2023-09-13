@@ -19,6 +19,9 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 
+    {{-- CUSTOM CSS --}}
+    {{-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> --}}
+
     <title>{{ $title }} | Kelas Laravel</title>
 </head>
 
@@ -36,7 +39,28 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script>
-        new DataTable('#example');
+        // new DataTable('#example');
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "language": {
+                    "lengthMenu": "Menampilkan _MENU_ catatan",
+                    "zeroRecords": "Data tidak ditemukan",
+                    "info": "Halaman _PAGE_ dari _PAGES_",
+                    "infoEmpty": "Tidak ditemukan data",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "search": "Cari",
+                    "paginate": {
+                        "previous": "Sebelumnya", // Mengubah teks "Previous" menjadi "Sebelumnya"
+                        "next": "Selanjutnya" // Mengubah teks "Next" menjadi "Selanjutnya"
+                    }
+                },
+                "select": true, // Aktifkan fitur Selectbox
+                columnDefs: [{
+                    "width": "6%",
+                    "targets": [0],
+                }], // Mengecilkan kolom "no"
+            });
+        });
     </script>
 </body>
 

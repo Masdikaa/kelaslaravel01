@@ -9,7 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $dataKelasA = DataKelas::all();
+        // ?Eloquent ORM (Object-Relational Mapping) 
+        $dataKelasA = DataKelas::all(); //Berfungsi untuk mengambil semua data yang ada dalam tabel yang sesuai dengan model DataKelas
         return view(
             'home',
             ['title' => 'Home', "dataKelasA" => $dataKelasA]

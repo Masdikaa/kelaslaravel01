@@ -19,9 +19,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
+// Home
 Route::get('/', [HomeController::class, 'index']);
 
+// Input data page
 Route::get('/input-data', [InputDataController::class, 'index']);
 
-// INSERT DATA KELAS
+// Insert Data Kelas 'Button Submit'
 Route::post('/store-data', [InputDataController::class, 'store']);
