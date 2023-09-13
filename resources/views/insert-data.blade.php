@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
         <div class="card border-secondary">
-            <div class="card-header text-center">
+            <div class="card-header text-center text-white bg-dark">
                 <h3>Insert Data</h3>
             </div>
             <div class="card-body">
