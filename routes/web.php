@@ -20,4 +20,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/input-data', [InputDataController::class, 'index']);
+
+// INSERT DATA KELAS
+Route::post('/store-data', [InputDataController::class, 'store']);

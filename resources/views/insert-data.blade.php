@@ -6,9 +6,9 @@
             <div class="card-header text-center">
                 <h3>Insert Data</h3>
             </div>
-            <div class="card-body pt-4">
+            <div class="card-body">
                 {{-- FORM INPUT --}}
-                <form class="mt-5" method="POST" action="store-data">
+                <form class="mt-3" method="POST" action="store-data">
 
                     @csrf
                     <div class="form-group my-2">
