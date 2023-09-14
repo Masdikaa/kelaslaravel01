@@ -27,3 +27,6 @@ Route::get('/input-data', [InputDataController::class, 'index']);
 
 // Insert Data Kelas 'Button Submit'
 Route::post('/store-data', [InputDataController::class, 'store']);
+
+// Dropdown Filter
+Route::get('/data-kelas-filter', [HomeController::class, 'index']);

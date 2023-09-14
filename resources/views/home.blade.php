@@ -7,6 +7,21 @@
                 <h3>Data Mahasiswa</h3>
             </div>
             <div class="card-body pt-4">
+
+                <div class="d-flex justify-content-between mb-2">
+
+                    <b>Data Kelas A</b>
+                    <form action="/data-kelas-filter" method="get">
+                        <select name="filterkelas" class="form-select form-select-sm" onchange="this.form.submit()">
+                            <option>~Pilih Asal~</option>
+                            <option value="Madiun">Madiun</option>
+                            <option value="Ponorogo">Ponorogo</option>
+                            <option value="Magetan">Magetan</option>
+                        </select>
+                    </form>
+
+                </div>
+
                 <table class="table stripe" id="example">
                     <thead>
                         <tr>
